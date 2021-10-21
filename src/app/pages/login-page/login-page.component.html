@@ -1,1 +1,25 @@
-<p>login-page works!</p>
+<div class="login-container">
+
+    <div class="content">
+        <h1>Login</h1>
+        <p>In order to use all features, please log in or register.</p>
+        <form [formGroup]="loginForm">
+            <mat-form-field>
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="pat@example.com" formControlName="email" required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Enter your password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+
+            <button class="gradient-button">Login</button>
+            <button class="regular-button">Register</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+mat-form-field {
+    width: 100%;
+    margin-top: 30px;
+}
+
+p {
+    margin-bottom: 30px;
+}
+
+.regular-button {
+    margin-top: 30px;
+}
+
+.gradient-button {
+    margin-top: 80px;
+}
+
+.content {
+    width: 70%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.login-container {
+    background-color: #222629;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 150px;
+    color: white;
+    padding: 50px 0;
+}

@@ -1,0 +1,38 @@
+/*
+#61892F
+#86C232
+#222629
+#474B4F
+#6B6E70
+*/
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    background-image: linear-gradient(135deg, #00fa2a, #00e6db);
+    font-weight: bold;
+}
+
+.navigation-bar-container {
+    height: 50px;
+    background-color: #222629;
+}
+
+.right-nav {
+    float: right;
+}

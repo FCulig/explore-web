@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './core/nav-bar/nav-bar.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { JumbotronComponent } from './core/jumbotron/jumbotron.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
     NavBarComponent,
     LandingPageComponent,
     LoginPageComponent,
+    JumbotronComponent,
   ],
   imports: [
     BrowserModule,

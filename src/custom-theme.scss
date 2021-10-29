@@ -10,7 +10,7 @@
 // have to load a single css file for Angular Material in your app.
 
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
 
 // Foreground Elements
 
@@ -221,4 +221,16 @@ $altTheme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
 .mat-standard-chip {
     padding: 0.5em 0.85em;
     min-height: 2.5em;
+}
+
+.mat-button-toggle {
+    background-color: #202224;
+}
+
+.mat-button-toggle-checked {
+    background-color: #222629;
+}
+
+.mat-button-toggle-checked .mat-icon {
+    color: #00e6db;
 }

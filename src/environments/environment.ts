@@ -6,7 +6,8 @@ export const environment = {
   production: false,
 
   mapbox: {
-    accessToken: "pk.eyJ1IjoiZmN1bGlnIiwiYSI6ImNrdXI2MWl5OTBhbGgydXA1bHhxeGN0M3UifQ.O4UDKb_YrzZ-UCxwKIn5Mg"
+    accessToken: "pk.eyJ1IjoiZmN1bGlnIiwiYSI6ImNrdXI2MWl5OTBhbGgydXA1bHhxeGN0M3UifQ.O4UDKb_YrzZ-UCxwKIn5Mg",
+    baseUrl: "https://api.mapbox.com"
   }
 };
 

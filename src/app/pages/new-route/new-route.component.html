@@ -1,3 +1,25 @@
-<div class="container">
-    <div id='map'></div>
+<div id='map'></div>
+<div class="new-route-form">
+    <div class="form-row">
+        <div class="label">
+            <label>Route type</label>
+        </div>
+        <div class="toggles">
+            <mat-button-toggle-group [(ngModel)]="routeType">
+                <mat-button-toggle value="walking">
+                    <mat-icon> directions_walk</mat-icon>
+                </mat-button-toggle>
+                <mat-button-toggle value="cycling">
+                    <mat-icon> directions_bike</mat-icon>
+                </mat-button-toggle>
+                <mat-button-toggle value="driving">
+                    <mat-icon> directions_car</mat-icon>
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+    </div>
+    <hr />
+    <div class="flex-center">
+        <button class="gradient-border" (click)="saveRoute()">Save</button>
+    </div>
 </div>

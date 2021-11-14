@@ -1,7 +1,8 @@
 <div class="navigation-bar-container">
     <nav class="right-nav">
         <ul>
-            <li><a routerLink="/login">Login</a></li>
+            <li *ngIf="!isUserLoggedIn"><a routerLink="/login">Login</a></li>
+            <li *ngIf="isUserLoggedIn"><a routerLink="">PROFILE</a></li>
         </ul>
     </nav>
 </div>

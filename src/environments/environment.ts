@@ -5,6 +5,8 @@
 export const environment = {
   production: false,
 
+  baseUrl: "http://127.0.0.1:8080/api/v1/",
+
   mapbox: {
     accessToken: "pk.eyJ1IjoiZmN1bGlnIiwiYSI6ImNrdXI2MWl5OTBhbGgydXA1bHhxeGN0M3UifQ.O4UDKb_YrzZ-UCxwKIn5Mg",
     baseUrl: "https://api.mapbox.com"

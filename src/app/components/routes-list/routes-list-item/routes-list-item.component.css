@@ -1,0 +1,41 @@
+img {
+    width: 100%;
+}
+
+hr {
+    height: 1px;
+    width: 90%;
+    margin: auto;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.route-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin: 15px 0;
+    padding: 10px;
+}
+
+.route-container:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+
+.details {
+    padding-left: 10px;
+}
+
+.details h3 {
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+
+.details p {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    font-size: 9pt;
+    color: rgba(255, 255, 255, 0.5);
+}

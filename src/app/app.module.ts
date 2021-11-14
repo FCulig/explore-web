@@ -19,6 +19,10 @@ import { JumbotronComponent } from './core/jumbotron/jumbotron.component';
 import { NewRouteComponent } from './pages/new-route/new-route.component';
 import { JwtInterceptor } from './interceptors/jwt.interceptor';
 import { ErrorInterceptor } from './interceptors/error.interceptor';
+import { RoutesPageComponent } from './pages/routes-page/routes-page.component';
+import { RoutesListComponent } from './components/routes-list/routes-list.component';
+import { RoutesListItemComponent } from './components/routes-list/routes-list-item/routes-list-item.component';
+import { RoutePageComponent } from './pages/route-page/route-page.component';
 
 const materialModules = [
   MatSliderModule,
@@ -36,6 +40,10 @@ const materialModules = [
     LoginPageComponent,
     NewRouteComponent,
     JumbotronComponent,
+    RoutesPageComponent,
+    RoutesListComponent,
+    RoutesListItemComponent,
+    RoutePageComponent,
   ],
   imports: [
     BrowserModule,

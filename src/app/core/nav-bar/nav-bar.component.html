@@ -1,8 +1,14 @@
 <div class="navigation-bar-container">
+    <nav class="left-nav">
+        <ul>
+            <li><a routerLink="/routes" routerLinkActive="nav-active">Explore</a></li>
+            <li *ngIf="isUserLoggedIn"><a routerLink="/route/add" routerLinkActive="nav-active">Add route</a></li>
+        </ul>
+    </nav>
     <nav class="right-nav">
         <ul>
-            <li *ngIf="!isUserLoggedIn"><a routerLink="/login">Login</a></li>
-            <li *ngIf="isUserLoggedIn"><a routerLink="">PROFILE</a></li>
+            <li *ngIf="!isUserLoggedIn"><a routerLink="/login"  routerLinkActive="nav-active">Login</a></li>
+            <li *ngIf="isUserLoggedIn"><a routerLink="/profile"  routerLinkActive="nav-active">PROFILE</a></li>
         </ul>
     </nav>
 </div>

@@ -1,0 +1,11 @@
+.content {
+    width: 70%;
+    margin: auto;
+    background-color: #222629;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 150px;
+    color: white;
+    padding: 10px 0;
+}

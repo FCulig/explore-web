@@ -1,10 +1,19 @@
 label {
-    font-size: 20pt;
+    font-size: 12pt;
+    display: block;
+    margin-bottom: 20px;
 }
 
 hr,
 .form-row {
     margin-bottom: 30px;
+}
+
+hr {
+    height: 1px;
+    width: 90%;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .new-route-form {
@@ -15,6 +24,10 @@ hr,
     padding: 20px;
     margin-top: 30px;
     border-radius: 5px;
+}
+
+.new-route-form div {
+    margin-bottom: 20px;
 }
 
 .form-row {
@@ -28,11 +41,34 @@ hr,
     align-items: center;
 }
 
+.text-area {
+    margin: 15px 0;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
 button {
     width: 75%;
 }
 
 #map {
     width: 100%;
-    height: 700px;
+    height: 500px;
+}
+
+.regular-button {
+    display: block;
+    margin: auto;
+}
+
+.image-preview {
+    margin-top: 25px;
+}
+
+.image-preview img {
+    height: 300px;
+    display: block;
+    margin: auto;
 }

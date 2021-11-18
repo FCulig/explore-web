@@ -13,4 +13,8 @@ export class RouteService {
   getRoutes(): Observable<any> {
     return this.http.get(environment.baseUrl + '/route');
   }
+
+  postRoute(routeFormData: FormData): Observable<any> {
+    return this.http.post<any>(environment.baseUrl + '/route', routeFormData);
+  }
 }

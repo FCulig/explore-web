@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSliderModule } from '@angular/material/slider';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ import { RoutesPageComponent } from './pages/routes-page/routes-page.component';
 import { RoutesListComponent } from './components/routes-list/routes-list.component';
 import { RoutesListItemComponent } from './components/routes-list/routes-list-item/routes-list-item.component';
 import { RoutePageComponent } from './pages/route-page/route-page.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 const materialModules = [
   MatSliderModule,
@@ -52,7 +54,9 @@ const materialModules = [
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
-    materialModules
+    materialModules,
+    ToastrModule.forRoot(),
+    NgxSpinnerModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

@@ -32,7 +32,8 @@
             "styles": [
               "src/custom-theme.scss",
               "src/styles.css",
-              "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css"
+              "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           },

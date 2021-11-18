@@ -3,6 +3,11 @@ import { environment } from 'src/environments/environment';
 import * as mapboxgl from 'mapbox-gl';
 import * as MapboxDraw from '@mapbox/mapbox-gl-draw';
 import { MapboxService } from 'src/app/services/mapbox.service';
+import { RouteService } from 'src/app/services/route.service';
+import { FormControl, FormGroup } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-route',
@@ -11,39 +16,83 @@ import { MapboxService } from 'src/app/services/mapbox.service';
 })
 export class NewRouteComponent implements OnInit {
 
-  private _routeType: any = "walking";
+  private _routeType: string = "walking";
+  private _routeImage: File;
 
   isMapping = false;
   map: mapboxgl.Map;
   draw: MapboxDraw;
-  coordinates: String;
+  coordinates: string;
+  routeForm: FormGroup;
+  routeImageUrl: any;
 
-  get routeType(): String {
+  get routeType(): string {
     return this._routeType;
   }
 
-  set routeType(newRouteType: String) {
+  set routeType(newRouteType: string) {
     this._routeType = newRouteType;
-    if (this.coordinates != "") {
+    if (this.coordinates && this.coordinates != "") {
       this.getDirections(this._routeType, this.coordinates);
     }
   }
 
-  constructor(private mapboxService: MapboxService) { }
+  constructor(
+    private mapboxService: MapboxService,
+    private routeService: RouteService,
+    private toastr: ToastrService,
+    private spinner: NgxSpinnerService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.initializeMap();
     this.bindDrawTool();
     this.bindCrudEvents();
+    this.initializeRouteForm();
+  }
+
+  initializeRouteForm() {
+    this.routeForm = new FormGroup({
+      name: new FormControl(''),
+      description: new FormControl('')
+    });
   }
 
   saveRoute() {
-    // TODO: POST Route details
+    this.spinner.show();
+    this.routeService.postRoute(this.convertFormToFormData()).subscribe(val => {
+      this.toastr.success('Route successfully added!');
+      this.spinner.hide();
+      this.router.navigate(['/routes']);
+    })
   }
 
-  setRouteType(routeType: String) {
+  setRouteType(routeType: string) {
     this.routeType = routeType;
     this.getDirections(this.routeType, this.coordinates);
+  }
+
+  onFileChanged(event: any) {
+    if (event.target && event.target.files && event.target.files[0]) {
+      this._routeImage = event.target.files[0]
+      let reader = new FileReader();
+      reader.readAsDataURL(this._routeImage);
+      reader.onload = (event) => {
+        this.routeImageUrl = event.target?.result;
+      }
+    }
+  }
+
+  private convertFormToFormData(): FormData {
+    let formData = new FormData();
+    formData.append('image', this._routeImage);
+    formData.append('name', this.routeForm.value.name);
+    formData.append('type', this.routeType);
+    formData.append('description', this.routeForm.value.description);
+    formData.append('coordinates', this.coordinates);
+    console.log(formData);
+    return formData;
   }
 
   private initializeMap() {

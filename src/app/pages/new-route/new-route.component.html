@@ -1,5 +1,21 @@
 <div id='map'></div>
 <div class="new-route-form">
+    <form [formGroup]="routeForm">
+        <div class="form-full-row">
+            <label>Route name</label>
+            <mat-form-field appearance="fill">
+                <input matInput formControlName="name">
+            </mat-form-field>
+        </div>
+        <div class="form-full-row">
+            <label>Route description</label>
+            <div class="text-area">
+                <mat-form-field appearance="fill">
+                    <textarea rows="5" matInput formControlName="description"></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
     <div class="form-row">
         <div class="label">
             <label>Route type</label>
@@ -16,6 +32,13 @@
                     <mat-icon> directions_car</mat-icon>
                 </mat-button-toggle>
             </mat-button-toggle-group>
+        </div>
+    </div>
+    <div class="form-full-row">
+        <input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
+        <button class="regular-button" type="button" (click)="fileInput.click()">Select Route Image</button>
+        <div class="image-preview" *ngIf="routeImageUrl">
+            <img [src]="routeImageUrl">
         </div>
     </div>
     <hr />

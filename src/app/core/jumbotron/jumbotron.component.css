@@ -3,12 +3,9 @@ header {
     width: 100vw;
     overflow: hidden;
     background: #222629;
-    background: -webkit-linear-gradient(#222619, #00fa2a25), url("./../../../assets/images/jumotron-image.jpg");
-    background: linear-gradient(#222619, #00fa2a25), url("./../../../assets/images/jumotron-image.jpg");
+    background: -webkit-linear-gradient(#222619, #00fa2a25), url("./../../../assets/images/jumbotron-image.jpg");
+    background: linear-gradient(#222619, #00fa2a25), url("./../../../assets/images/jumbotron-image.jpg");
     background-size: cover;
-}
-
-header {
     display: flex;
     align-items: center;
     justify-content: center;

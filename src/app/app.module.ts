@@ -25,6 +25,8 @@ import { RoutesListComponent } from './components/routes-list/routes-list.compon
 import { RoutesListItemComponent } from './components/routes-list/routes-list-item/routes-list-item.component';
 import { RoutePageComponent } from './pages/route-page/route-page.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 
 const materialModules = [
   MatSliderModule,
@@ -46,6 +48,7 @@ const materialModules = [
     RoutesListComponent,
     RoutesListItemComponent,
     RoutePageComponent,
+    ProfilePageComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ const materialModules = [
     FormsModule,
     materialModules,
     ToastrModule.forRoot(),
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    FontAwesomeModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

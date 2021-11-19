@@ -29,9 +29,11 @@ export class AuthenticationService {
   login(authenticationCredentials: any): Observable<any> {
     return this.http
       .post(environment.baseUrl + 'auth/login', authenticationCredentials)
-      .pipe(map(user => {
-        localStorage.setItem('currentUser', JSON.stringify(user));
-        this.currentUserSubject.next(<User>user);
+      .pipe(map((user: any) => {
+        let userWithToken = user.user;
+        userWithToken.token = user.token;
+        localStorage.setItem('currentUser', JSON.stringify(userWithToken));
+        this.currentUserSubject.next(<User>userWithToken);
         return user;
       }));
   }

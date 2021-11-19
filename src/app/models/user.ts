@@ -1,7 +1,8 @@
 export class User {
-    id: String;
-    email: String;
-    token: String;
-    updatedAt: String;
-    createdAt: String;
+    id: string;
+    email: string;
+    username: string;
+    token: string;
+    updatedAt: string;
+    createdAt: string;
 }

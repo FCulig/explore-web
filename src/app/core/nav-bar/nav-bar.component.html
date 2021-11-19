@@ -7,8 +7,19 @@
     </nav>
     <nav class="right-nav">
         <ul>
-            <li *ngIf="!isUserLoggedIn"><a routerLink="/login"  routerLinkActive="nav-active">Login</a></li>
-            <li *ngIf="isUserLoggedIn"><a routerLink="/profile"  routerLinkActive="nav-active">PROFILE</a></li>
+            <li *ngIf="!isUserLoggedIn"><a routerLink="/login" routerLinkActive="nav-active">Login</a></li>
+            <li *ngIf="isUserLoggedIn">
+
+                <div class="dropdown">
+                    <a class="dropbtn" routerLink="/profile" routerLinkActive="nav-active">
+                        <fa-icon [icon]="userIcon"></fa-icon> {{username}}
+                    </a>
+                    <div class="dropdown-content">
+                        <a routerLink="/profile">My profile</a>
+                        <a (click)="logout()" routerLink="/login">Logout</a>
+                    </div>
+                </div>
+            </li>
         </ul>
     </nav>
 </div>

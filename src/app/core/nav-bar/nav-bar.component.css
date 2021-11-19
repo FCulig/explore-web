@@ -6,6 +6,13 @@
 #6B6E70
 */
 
+fa-icon {
+    padding: 0;
+    margin: 0;
+    margin-right: 5px;
+    display: inline-block;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -17,6 +24,7 @@ nav ul {
 
 nav ul li {
     display: inline-block;
+    text-align: center;
 }
 
 nav ul li a {
@@ -47,4 +55,30 @@ nav ul li a:hover {
 
 .right-nav {
     float: right;
+}
+
+
+/* Dropdown */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #222629;
+    width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding-left: 20px !important;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }

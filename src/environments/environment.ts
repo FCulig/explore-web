@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
 
+  host: "http://127.0.0.1:8080/",
   baseUrl: "http://127.0.0.1:8080/api/v1/",
 
   mapbox: {

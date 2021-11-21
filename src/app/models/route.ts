@@ -4,6 +4,7 @@ export class Route {
     id: string;
     name: string;
     type: string;
+    image_name: string;
     coordinates: string;
     user: User;
 }

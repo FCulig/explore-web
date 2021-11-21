@@ -11,10 +11,10 @@ export class RouteService {
   constructor(private http: HttpClient) { }
 
   getRoutes(): Observable<any> {
-    return this.http.get(environment.baseUrl + '/route');
+    return this.http.get(environment.baseUrl + 'route');
   }
 
   postRoute(routeFormData: FormData): Observable<any> {
-    return this.http.post<any>(environment.baseUrl + '/route', routeFormData);
+    return this.http.post<any>(environment.baseUrl + 'route', routeFormData);
   }
 }

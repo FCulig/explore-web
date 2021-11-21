@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Route } from 'src/app/models/route';
+import { RouteService } from 'src/app/services/route.service';
 
 @Component({
   selector: 'app-routes-page',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoutesPageComponent implements OnInit {
 
-  constructor() { }
+  routes: Route[]
+
+  constructor(private routeSerive: RouteService) { }
 
   ngOnInit(): void {
+    this.getRoutes();
+  }
+
+  private getRoutes() {
+    this.routeSerive.getRoutes().subscribe(val=> {
+      this.routes = val;
+    });
   }
 
 }

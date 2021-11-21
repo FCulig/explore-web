@@ -11,7 +11,7 @@ import { RoutesPageComponent } from './pages/routes-page/routes-page.component';
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'login', component: LoginPageComponent },
-  { path: 'profile', component: ProfilePageComponent},
+  { path: 'profile/:username', component: ProfilePageComponent},
   { path: 'routes', component: RoutesPageComponent},
   { path: 'route/add', component: NewRouteComponent, canActivate: [AuthGuard] },
   { path: 'route/:id', component: RoutePageComponent},

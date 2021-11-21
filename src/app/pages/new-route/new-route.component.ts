@@ -91,7 +91,6 @@ export class NewRouteComponent implements OnInit {
     formData.append('type', this.routeType);
     formData.append('description', this.routeForm.value.description);
     formData.append('coordinates', this.coordinates);
-    console.log(formData);
     return formData;
   }
 

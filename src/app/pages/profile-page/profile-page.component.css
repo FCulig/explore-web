@@ -1,0 +1,84 @@
+fa-icon {
+    margin-right: 5px;
+}
+
+.user-routes {
+    background-color: #222629;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.user-info,
+.user-routes {
+    padding: 10px;
+}
+
+.info {
+    position: absolute;
+    bottom: 10px;
+    left: 280px;
+}
+
+.content {
+    width: 90%;
+    margin: auto;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 100px;
+    color: white;
+}
+
+.user-info {
+    position: relative;
+    display: grid;
+    grid-template-columns: 250px calc(100% - 250px);
+}
+
+.user-info img {
+    width: 95%;
+    border-radius: 5px;
+    display: block;
+}
+
+.user-info ul,
+.user-info li {
+    padding: 0;
+    margin: 0;
+}
+
+.user-info li {
+    list-style-type: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.change-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 260px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #222629c5;
+    border-radius: 5px;
+}
+
+.image-container:hover .change-image {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.change-image-text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}

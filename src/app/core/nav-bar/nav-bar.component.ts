@@ -24,7 +24,6 @@ export class NavBarComponent implements OnInit {
       if (user?.token) {
         this.isUserLoggedIn = true;
         this.username = user.username;
-        console.log(user)
       } else {
         this.isUserLoggedIn = false;
       }

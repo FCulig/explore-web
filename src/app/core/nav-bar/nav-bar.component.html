@@ -11,11 +11,11 @@
             <li *ngIf="isUserLoggedIn">
 
                 <div class="dropdown">
-                    <a class="dropbtn" routerLink="/profile" routerLinkActive="nav-active">
+                    <a class="dropbtn" routerLink="/profile/{{username}}" routerLinkActive="nav-active">
                         <fa-icon [icon]="userIcon"></fa-icon> {{username}}
                     </a>
                     <div class="dropdown-content">
-                        <a routerLink="/profile">My profile</a>
+                        <a routerLink="/profile/{{username}}">My profile</a>
                         <a (click)="logout()" routerLink="/login">Logout</a>
                     </div>
                 </div>

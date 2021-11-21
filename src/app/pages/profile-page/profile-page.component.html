@@ -1,1 +1,33 @@
-<p>profile-page works!</p>
+<div class="content">
+    <div class="user-info">
+        <div class="image-container">
+            <img [src]="profileImage">
+            <input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
+            <div class="change-image" *ngIf="isProfileEditable" (click)="fileInput.click()">
+                <div class="change-image-text">
+                    <fa-icon [icon]="faCamera"></fa-icon> Change profile photo
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <h1>{{user?.username}}</h1>
+            <div class="text-info">
+                <ul>
+                    <li>
+                        <fa-icon [icon]="faUser"></fa-icon> {{user?.email}}
+                    </li>
+                    <li>
+                        <fa-icon [icon]="faClock"></fa-icon> Member since: {{user?.createdAt}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="user-routes">
+        <div *ngIf="usersRoutes.length > 0">
+            <h2>Users routes</h2>
+            <app-routes-list [routes]="usersRoutes"></app-routes-list>
+        </div>
+        <p *ngIf="usersRoutes.length == 0">User has no routes.</p>
+    </div>
+</div>

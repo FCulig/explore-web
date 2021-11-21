@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Route } from 'src/app/models/route';
 import { RouteService } from 'src/app/services/route.service';
@@ -10,24 +10,13 @@ import { RouteService } from 'src/app/services/route.service';
 })
 export class RoutesListComponent implements OnInit {
 
-  routes: Route[] = [];
+  @Input() routes: Route[] = [];
 
-  constructor(
-    private routeService: RouteService,
-    private router: Router
-  ) { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
-    this.getRoutes()
-  }
+  ngOnInit(): void { }
 
   navigateToRoute(routeId: String) {
     this.router.navigate(['/route/' + routeId]);
-  }
-
-  private getRoutes() {
-    this.routeService.getRoutes().subscribe(routes => {
-      this.routes = routes
-    });
   }
 }

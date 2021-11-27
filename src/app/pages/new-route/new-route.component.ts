@@ -119,7 +119,6 @@ export class NewRouteComponent implements OnInit {
 
   private getDirections(type: String, coordinates: String) {
     this.mapboxService.getDirections(type, coordinates).subscribe(val => {
-      console.log(val);
       this.addRoute(val.routes[0].geometry);
     });
   }

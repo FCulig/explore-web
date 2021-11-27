@@ -13,7 +13,7 @@ export class MapboxService {
   getDirections(type: String, coordinates: String): Observable<any> {
     return this.http.get(
       environment.mapbox.baseUrl + '/directions/v5/mapbox/' + type + '/' +
-      coordinates + '?alternatives=false&geometries=geojson&steps=false&access_token=' + environment.mapbox.accessToken
+      coordinates + '?alternatives=false&geometries=geojson&steps=true&access_token=' + environment.mapbox.accessToken
     );
   }
 }

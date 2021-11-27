@@ -1,1 +1,20 @@
-<p>route-page works!</p>
+<div *ngIf="route">
+    <header [style.background]="'linear-gradient(0deg, #202224 1%, rgba(0, 0, 0, 0.011) 92%), url('+image+')'" [style.background-size]="'cover'">
+    </header>
+    <div class="content">
+        <div class="title-container">
+            <h1>{{route.name}}</h1>
+            <p> created by <a routerLink="/profile/{{route.user.username}}">{{route.user.username}}</a></p>
+        </div>
+        <p>{{route.description}}</p>
+        <div class="map-container">
+            <div id='map'></div>
+            <div class="instructions">
+                <h2>Route instructions:</h2>
+                <ol>
+                    <li *ngFor="let instruction of instructions">{{instruction}}</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,10 +1,16 @@
 <div class="route-container">
-    <div class="image">
+    <div class="image" (click)="navigateToRoute(route.id)">
         <img [src]="routeImage">
     </div>
-    <div class="details">
+    <div class="details" (click)="navigateToRoute(route.id)">
         <h3>{{route.name}}</h3>
-        <p *ngIf="route.user.email">Created by: {{route.user.email}}</p>
+        <p class="description">{{route.description}}</p>
+        <p class="created-by" *ngIf="route.user.email">Created by: {{route.user.email}}</p>
+    </div>
+    <div class="control">
+        <button *ngIf="isDeletable" class="delete" (click)="delete()">
+            <fa-icon [icon]="faTrash"></fa-icon>
+        </button>
     </div>
 </div>
 <hr>

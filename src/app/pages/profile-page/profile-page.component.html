@@ -17,7 +17,7 @@
                         <fa-icon [icon]="faUser"></fa-icon> {{user?.email}}
                     </li>
                     <li>
-                        <fa-icon [icon]="faClock"></fa-icon> Member since: {{user?.createdAt}}
+                        <fa-icon [icon]="faClock"></fa-icon> Member since: {{user?.createdAt | date}}
                     </li>
                 </ul>
             </div>

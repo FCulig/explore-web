@@ -22,4 +22,8 @@ export class RouteService {
   postRoute(routeFormData: FormData): Observable<any> {
     return this.http.post<any>(environment.baseUrl + 'route', routeFormData);
   }
+
+  deleteRoute(routeId: string): Observable<any> {
+    return this.http.delete(environment.baseUrl + 'route/' + routeId);
+  }
 }

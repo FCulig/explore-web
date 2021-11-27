@@ -12,7 +12,7 @@ hr {
 
 .route-container {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 20% 75% 5%;
     margin: 15px 0;
     padding: 10px;
 }
@@ -32,10 +32,19 @@ hr {
     font-weight: normal;
 }
 
-.details p {
+.details p.description,
+.details p.created-by {
     padding: 0;
     margin: 0;
-    display: inline-block;
+}
+
+.details p.created-by {
     font-size: 9pt;
     color: rgba(255, 255, 255, 0.5);
+}
+
+.details p.description {
+    font-size: 11pt;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 10px 0;
 }

@@ -17,7 +17,7 @@ export class RoutesPageComponent implements OnInit {
     this.getRoutes();
   }
 
-  private getRoutes() {
+  getRoutes() {
     this.routeSerive.getRoutes().subscribe(val=> {
       this.routes = val;
     });

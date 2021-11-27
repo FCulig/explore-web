@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Route } from 'src/app/models/route';
 import { RouteService } from 'src/app/services/route.service';
@@ -11,12 +11,13 @@ import { RouteService } from 'src/app/services/route.service';
 export class RoutesListComponent implements OnInit {
 
   @Input() routes: Route[] = [];
+  @Output() refreshList = new EventEmitter();
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void { }
 
-  navigateToRoute(routeId: String) {
-    this.router.navigate(['/route/' + routeId]);
+  refreshRoutes() {
+    this.refreshList.emit();
   }
 }

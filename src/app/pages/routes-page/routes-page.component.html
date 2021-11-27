@@ -1,4 +1,4 @@
 <header></header>
 <div class="content">
-    <app-routes-list [routes]="routes"></app-routes-list>
+    <app-routes-list [routes]="routes" (refreshList)="getRoutes()"></app-routes-list>
 </div>

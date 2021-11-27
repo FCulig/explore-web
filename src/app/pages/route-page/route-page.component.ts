@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import * as MapboxDraw from '@mapbox/mapbox-gl-draw';
-import { GeoJsonObject, Geometry } from 'geojson';
 import * as mapboxgl from 'mapbox-gl';
 import { Route } from 'src/app/models/route';
 import { MapboxService } from 'src/app/services/mapbox.service';

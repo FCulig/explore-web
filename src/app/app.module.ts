@@ -27,6 +27,7 @@ import { RoutePageComponent } from './pages/route-page/route-page.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
 
 const materialModules = [
   MatSliderModule,
@@ -49,6 +50,7 @@ const materialModules = [
     RoutesListItemComponent,
     RoutePageComponent,
     ProfilePageComponent,
+    RegisterPageComponent,
   ],
   imports: [
     BrowserModule,

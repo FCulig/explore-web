@@ -1,18 +1,22 @@
 <div class="login-container">
     <div class="content">
-        <h1>Login</h1>
+        <h1>Register</h1>
         <p>In order to use all features, please log in or register.</p>
-        <form [formGroup]="loginForm">
+        <form [formGroup]="registerForm">
             <mat-form-field [floatLabel]="'never'">
                 <input matInput placeholder="Email" formControlName="email" required>
+            </mat-form-field>
+
+            <mat-form-field [floatLabel]="'never'">
+                <input matInput placeholder="Username" formControlName="username" required>
             </mat-form-field>
 
             <mat-form-field [floatLabel]="'never'">
                 <input matInput placeholder="Password" formControlName="password" type="password" required>
             </mat-form-field>
 
-            <button (click)="login()" class="gradient-button">Login</button>
-            <button (click)="navigateToRegister()" class="regular-button">Register</button>
+            <button (click)="register()" class="gradient-button">Register</button>
+            <button (click)="navigateToLogin()" class="regular-button">Login</button>
         </form>
     </div>
 </div>

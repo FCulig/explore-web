@@ -27,25 +27,22 @@ export class LoginPageComponent implements OnInit {
     this.initializeLoginForm();
   }
 
-  initializeLoginForm() {
-    this.loginForm = new FormGroup({
-      email: new FormControl(''),
-      password: new FormControl(''),
-    });
-  }
-
   login() {
     this.authenticationService.login(this.loginForm.value).subscribe(val => {
-      console.log(val);
       if (val.token) {
         this.router.navigate(['/']);
       }
     });
   }
 
-  register() {
-    this.authenticationService.register(this.loginForm.value).subscribe(val => {
-      this.login();
+  navigateToRegister() {
+    this.router.navigate(['/register']);
+  }
+
+  private initializeLoginForm() {
+    this.loginForm = new FormGroup({
+      email: new FormControl(''),
+      password: new FormControl(''),
     });
   }
 }

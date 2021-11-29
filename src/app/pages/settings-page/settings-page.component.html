@@ -1,0 +1,34 @@
+<div class="content" *ngIf="user">
+    <h1>Account settings</h1>
+    <div class="image-setting">
+        <div class="description">
+            <h2>Profile image</h2>
+        </div>
+        <div class="value">
+            <img [src]="profileImage">
+            <input style="display: none" type="file" (change)="onProfileImageChanged($event)" #profileImageFileInput>
+            <div class="change-image" (click)="profileImageFileInput.click()">
+                <div class="change-image-text">
+                    <fa-icon [icon]="faCamera"></fa-icon> Change profile photo
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-setting">
+        <div class="description">
+            <h2>Cover image</h2>
+        </div>
+        <div class="value">
+            <img [src]="coverImage">
+            <input style="display: none" type="file" (change)="onCoverImageChanged($event)" #coverImageFileInput>
+            <div class="change-image" (click)="coverImageFileInput.click()">
+                <div class="change-image-text">
+                    <fa-icon [icon]="faCamera"></fa-icon> Change cover photo
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="regular-button delete-button" (click)="deleteAccount()">Delete account</button>
+</div>

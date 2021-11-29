@@ -28,6 +28,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { SettingsPageComponent } from './pages/settings-page/settings-page.component';
 
 const materialModules = [
   MatSliderModule,
@@ -51,6 +52,7 @@ const materialModules = [
     RoutePageComponent,
     ProfilePageComponent,
     RegisterPageComponent,
+    SettingsPageComponent,
   ],
   imports: [
     BrowserModule,

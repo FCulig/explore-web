@@ -1,0 +1,63 @@
+img {
+    width: 150px;
+}
+
+.content {
+    width: 70%;
+    margin: auto;
+    background-color: #222629;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 100px;
+    color: white;
+    padding: 10px;
+}
+
+.image-setting {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.image-setting .value {
+    position: relative;
+}
+
+.image-setting .description h2 {
+    display: inline-block;
+    font-weight: normal;
+}
+
+.change-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -5px;
+    right: 0;
+    height: 100%;
+    width: 160px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #222629c5;
+    border-radius: 5px;
+}
+
+.image-setting .value:hover .change-image {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.change-image-text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}

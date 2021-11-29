@@ -21,6 +21,7 @@ export class ProfilePageComponent implements OnInit {
   faClock = faClock;
 
   profileImage: string;
+  coverImage: string;
   user: User;
   usersRoutes: Route[] = [];
   isProfileEditable: boolean = false;
@@ -52,6 +53,7 @@ export class ProfilePageComponent implements OnInit {
       this.user = val;
       this.usersRoutes = val.routes;
       this.profileImage = environment.host + this.user.profile_image;
+      this.coverImage = environment.host + this.user.cover_image;
 
       if (this.authService.currentUserValue?.id == val.id) {
         this.isProfileEditable = true

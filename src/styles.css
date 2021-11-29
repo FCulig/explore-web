@@ -38,6 +38,16 @@ body {
     letter-spacing: 2px;
 }
 
+.delete-button {
+    border: 3px solid #ff4545;
+    color: #ff4545;
+}
+
+.delete-button:hover {
+    border-color: red;
+    color: red;
+}
+
 .regular-button:hover,
 .gradient-button:hover,
 .gradient-border:hover {
